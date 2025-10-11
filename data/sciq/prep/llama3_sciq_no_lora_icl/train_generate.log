@@ -1,0 +1,45 @@
+2025-09-20 00:14:31,415 - root - INFO - No BitsAndBytes use.
+
+2025-09-20 00:14:31,416 - root - INFO - Loading model and tokenizer from NousResearch/Meta-Llama-3-8B ...
+
+2025-09-20 00:14:31,426 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+
+2025-09-20 00:14:42,013 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+
+2025-09-20 00:15:07,805 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+
+2025-09-20 00:15:17,854 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+
+2025-09-20 00:15:28,723 - root - INFO - Loading data from ./data/sciq/raw/train.json ...
+
+2025-09-20 00:15:28,803 - root - INFO - Arguments:
+Model Arguments: ModelArguments(model_name='llama3', lora_use=False, lora_weights='./exp/{}/train', model_suffix='no_lora', bnb_use=False, load_in_4bit=False, bnb_4bit_quant_type='nf4', bnb_4bit_compute_dtype=torch.float16, model_max_length=2048, use_fast=False, padding_side='right', trust_remote_code=False)
+Data Arguments: DataArguments(data_dir='./data/{}/raw', dataset='sciq', data_file='train', prompt_dir='./prompt/', continue_generate=False, sample_interval=1)
+Inference Arguments: InferenceArguments(icl_type='icl', output_dir='./data/sciq/prep/llama3_sciq_no_lora_icl', data_suffix='sample_2k', num_sampling=2, temperature=0.5, top_p=1.0, top_k=40, num_beams=1, max_gen_length=24, repetition_penalty=1.1)
+
+2025-09-20 00:15:28,804 - root - INFO - The number of dataset: 11679
+
+2025-09-20 00:15:28,805 - root - INFO - Start sampling ...
+
+2025-09-21 02:02:47,540 - root - INFO - Total elapsed time: 25h 47m 18s
+
+2025-09-21 02:02:47,540 - root - INFO - Sampling is done.
+
+2025-09-21 02:02:51,481 - root - INFO - Save to ./data/sciq/prep/llama3_sciq_no_lora_icl/llama3_sciq_train.json
+
+2025-09-21 02:02:51,521 - filelock - DEBUG - Attempting to acquire lock 140394696308672 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-21 02:02:51,522 - filelock - DEBUG - Lock 140394696308672 acquired on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-21 02:02:51,522 - filelock - DEBUG - Attempting to release lock 140394696308672 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-21 02:02:51,523 - filelock - DEBUG - Lock 140394696308672 released on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-21 02:02:51,535 - filelock - DEBUG - Attempting to acquire lock 140394696304640 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-21 02:02:51,535 - filelock - DEBUG - Lock 140394696304640 acquired on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-21 02:02:51,536 - filelock - DEBUG - Attempting to release lock 140394696304640 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-21 02:02:51,536 - filelock - DEBUG - Lock 140394696304640 released on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+

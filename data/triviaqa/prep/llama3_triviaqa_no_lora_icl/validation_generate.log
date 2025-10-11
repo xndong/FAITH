@@ -1,0 +1,45 @@
+2025-09-24 16:53:39,581 - root - INFO - No BitsAndBytes use.
+
+2025-09-24 16:53:39,582 - root - INFO - Loading model and tokenizer from NousResearch/Meta-Llama-3-8B ...
+
+2025-09-24 16:53:39,593 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+
+2025-09-24 16:53:50,357 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+
+2025-09-24 16:54:05,773 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+
+2025-09-24 16:54:15,805 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+
+2025-09-24 16:54:26,668 - root - INFO - Loading data from ./data/triviaqa/raw/validation.json ...
+
+2025-09-24 16:54:26,758 - root - INFO - Arguments:
+Model Arguments: ModelArguments(model_name='llama3', lora_use=False, lora_weights='./exp/{}/train', model_suffix='no_lora', bnb_use=False, load_in_4bit=False, bnb_4bit_quant_type='nf4', bnb_4bit_compute_dtype=torch.float16, model_max_length=2048, use_fast=False, padding_side='right', trust_remote_code=False)
+Data Arguments: DataArguments(data_dir='./data/{}/raw', dataset='triviaqa', data_file='validation', prompt_dir='./prompt/', continue_generate=False, sample_interval=1)
+Inference Arguments: InferenceArguments(icl_type='icl', output_dir='./data/triviaqa/prep/llama3_triviaqa_no_lora_icl', data_suffix='sample_2k', num_sampling=2, temperature=0.5, top_p=1.0, top_k=40, num_beams=1, max_gen_length=24, repetition_penalty=1.1)
+
+2025-09-24 16:54:26,759 - root - INFO - The number of dataset: 9960
+
+2025-09-24 16:54:26,759 - root - INFO - Start sampling ...
+
+2025-09-25 15:14:24,108 - root - INFO - Total elapsed time: 22h 19m 57s
+
+2025-09-25 15:14:24,109 - root - INFO - Sampling is done.
+
+2025-09-25 15:14:27,850 - root - INFO - Save to ./data/triviaqa/prep/llama3_triviaqa_no_lora_icl/llama3_triviaqa_validation.json
+
+2025-09-25 15:14:27,897 - filelock - DEBUG - Attempting to acquire lock 139960745899920 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 15:14:27,897 - filelock - DEBUG - Lock 139960745899920 acquired on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 15:14:27,898 - filelock - DEBUG - Attempting to release lock 139960745899920 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 15:14:27,899 - filelock - DEBUG - Lock 139960745899920 released on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 15:14:27,908 - filelock - DEBUG - Attempting to acquire lock 139960745895888 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 15:14:27,909 - filelock - DEBUG - Lock 139960745895888 acquired on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 15:14:27,909 - filelock - DEBUG - Attempting to release lock 139960745895888 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 15:14:27,910 - filelock - DEBUG - Lock 139960745895888 released on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+

@@ -1,0 +1,45 @@
+2025-09-24 16:53:39,552 - root - INFO - No BitsAndBytes use.
+
+2025-09-24 16:53:39,553 - root - INFO - Loading model and tokenizer from NousResearch/Meta-Llama-3-8B ...
+
+2025-09-24 16:53:39,564 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+
+2025-09-24 16:53:50,356 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+
+2025-09-24 16:54:05,679 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+
+2025-09-24 16:54:15,730 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+
+2025-09-24 16:54:26,668 - root - INFO - Loading data from ./data/nqopen/raw/validation.json ...
+
+2025-09-24 16:54:26,758 - root - INFO - Arguments:
+Model Arguments: ModelArguments(model_name='llama3', lora_use=False, lora_weights='./exp/{}/train', model_suffix='no_lora', bnb_use=False, load_in_4bit=False, bnb_4bit_quant_type='nf4', bnb_4bit_compute_dtype=torch.float16, model_max_length=2048, use_fast=False, padding_side='right', trust_remote_code=False)
+Data Arguments: DataArguments(data_dir='./data/{}/raw', dataset='nqopen', data_file='validation', prompt_dir='./prompt/', continue_generate=False, sample_interval=1)
+Inference Arguments: InferenceArguments(icl_type='icl', output_dir='./data/nqopen/prep/llama3_nqopen_no_lora_icl', data_suffix='sample_2k', num_sampling=2, temperature=0.5, top_p=1.0, top_k=40, num_beams=1, max_gen_length=24, repetition_penalty=1.1)
+
+2025-09-24 16:54:26,759 - root - INFO - The number of dataset: 3610
+
+2025-09-24 16:54:26,759 - root - INFO - Start sampling ...
+
+2025-09-25 01:06:10,710 - root - INFO - Total elapsed time: 8h 11m 43s
+
+2025-09-25 01:06:10,711 - root - INFO - Sampling is done.
+
+2025-09-25 01:06:12,152 - root - INFO - Save to ./data/nqopen/prep/llama3_nqopen_no_lora_icl/llama3_nqopen_validation.json
+
+2025-09-25 01:06:12,199 - filelock - DEBUG - Attempting to acquire lock 140486764951584 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 01:06:12,200 - filelock - DEBUG - Lock 140486764951584 acquired on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 01:06:12,201 - filelock - DEBUG - Attempting to release lock 140486764951584 on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 01:06:12,201 - filelock - DEBUG - Lock 140486764951584 released on /tmp/triton_cache/Fp16Matmul_2d_kernel.pickle.lock
+
+2025-09-25 01:06:12,209 - filelock - DEBUG - Attempting to acquire lock 140486764947552 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 01:06:12,209 - filelock - DEBUG - Lock 140486764947552 acquired on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 01:06:12,209 - filelock - DEBUG - Attempting to release lock 140486764947552 on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
+2025-09-25 01:06:12,210 - filelock - DEBUG - Lock 140486764947552 released on /tmp/triton_cache/Fp16Matmul_4d_kernel.pickle.lock
+
