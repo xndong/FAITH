@@ -1,0 +1,7 @@
+cache_dir: null
+hub_name: huggingface
+lang: en
+last_model: Llama-3-8B
+path_dict:
+  Llama-3-8B: output_merged/K10-SFT-lora-Meta-Llama-3-8B
+  Mistral-7B-v0.1: /gfshome/LLM-cache/Meta-Llama-3-8B

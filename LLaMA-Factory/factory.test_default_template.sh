@@ -1,0 +1,25 @@
+
+llamafactory-cli train \
+    --stage sft \
+    --model_name_or_path /gfshome/LLM-cache/Mistral-7B-v0.1 \
+    --preprocessing_num_workers 16 \
+    --finetuning_type lora \
+    --quantization_method bnb \
+    --template default \
+    --flash_attn auto \
+    --dataset_dir data \
+    --eval_dataset sciq_eval \
+    --cutoff_len 1024 \
+    --max_samples 100000 \
+    --per_device_eval_batch_size 8 \
+    --predict_with_generate True \
+    --report_to none \
+    --max_new_tokens 512 \
+    --top_p 0.7 \
+    --temperature 0.2 \
+    --output_dir saves/Mistral-7B-v0.1/lora/test_default_template \
+    --trust_remote_code True \
+    --ddp_timeout 180000000 \
+    --do_predict True \
+    --default_system You_are_a_helpful_assistant \
+    --adapter_name_or_path output_factory/SFT-lora-Mistral-7B-v0.1/checkpoint-950

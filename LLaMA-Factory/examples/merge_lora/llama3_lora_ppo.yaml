@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: output_factory/SFT-lora-Meta-Llama-3-8B ❎改成合并后的模型
+adapter_name_or_path: output_factory/PPO-lora-Meta-Llama-3-8B
+template: default
+trust_remote_code: true
+
+### export
+export_dir: output_merged/PPO-lora-Meta-Llama-3-8B
+export_size: 32
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false

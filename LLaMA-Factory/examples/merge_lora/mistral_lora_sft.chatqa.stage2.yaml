@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: output_merged/ChatQA-SFT-lora-Mistral-7B-v0.1
+adapter_name_or_path: /gfshome/UAlign/LLaMA-Factory/output_factory/ChatQA-SFT-stage2-lora-Mistral-7B-v0.1/checkpoint-464
+template: default
+trust_remote_code: true
+
+### export
+export_dir: output_merged/ChatQA-SFT-stage2-lora-Mistral-7B-v0.1
+export_size: 32
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
